@@ -1,0 +1,67 @@
+;-------------------------------------------------
+;design block
+;---------------------------------------------
+module edgedetect (out_p, out_n, in, clk );
+output out_p, out_n;
+input in, clk;
+wire w1, w2;
+D_FF d1 (in, clk, w1, , );
+D_FF d2 (w1, clk, w2, , );
+assign out_p = w1 & (~w2);
+assign out_n = w2 & (~w1);
+endmodule
+
+module D_FF (D, CLK, Q, SET, RST);
+input D, CLK, SET, RST;
+output Q;
+reg Q;
+always @(posedge CLK or posedge SET or posedge RST)
+begin
+ if (SET)
+  Q = 1'b1;
+ else if (RST)
+  Q = 1'b0;
+ else  
+  Q = D;
+end
+endmodule
+
+;---------------------------------------------------
+;test file
+;---------------------------------------------------
+module stimulus;
+reg clk;
+reg in;
+wire out_p, out_n;
+
+edgedetect ed1(out_p, out_n, in, clk );
+
+initial
+   clk = 1'b0;
+always begin
+	
+   #10 clk = ~clk;
+   end
+   
+initial
+
+fork
+   in = 1'b0;
+   #25 in = 1'b1;
+   #55 in = 1'b0;
+
+   #125 in = 1'b1;
+   #135 in = 1'b0;
+
+   #185 in = 1'b1;
+   #187 in = 1'b0;
+   
+   #232 in = 1'b1;
+   #234 in = 1'b0;
+
+   #300 $finish;
+join
+
+endmodule
+
+

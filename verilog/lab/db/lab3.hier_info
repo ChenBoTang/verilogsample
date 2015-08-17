@@ -1,0 +1,14 @@
+|lab3
+x1 => w5.IN0
+x1 => w3.IN0
+x2 => w4.IN0
+x2 => w6.IN0
+x3 => w3.IN1
+x3 => w5.IN1
+x4 => w6.IN1
+x4 => w4.IN1
+g <= comb~0.DB_MAX_OUTPUT_PORT_TYPE
+f <= comb~2.DB_MAX_OUTPUT_PORT_TYPE
+h <= comb~1.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,54 @@
+|mux81
+in[0] => in[0]~7.IN1
+in[1] => in[1]~6.IN1
+in[2] => in[2]~5.IN1
+in[3] => in[3]~4.IN1
+in[4] => in[4]~3.IN1
+in[5] => in[5]~2.IN1
+in[6] => in[6]~1.IN1
+in[7] => in[7]~0.IN1
+out <= mux21:cc.port1
+sel[0] => sel[0]~2.IN2
+sel[1] => sel[1]~1.IN2
+sel[2] => sel[2]~0.IN1
+
+
+|mux81|mux41:aa
+in[0] => out~0.DATAA
+in[1] => out~0.DATAB
+in[2] => out~2.DATAB
+in[3] => out~4.DATAB
+out <= out$latch.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => Equal0.IN0
+sel[0] => Equal1.IN0
+sel[0] => Equal2.IN1
+sel[0] => Equal3.IN0
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN1
+sel[1] => Equal2.IN0
+sel[1] => Equal3.IN1
+
+
+|mux81|mux41:bb
+in[0] => out~0.DATAA
+in[1] => out~0.DATAB
+in[2] => out~2.DATAB
+in[3] => out~4.DATAB
+out <= out$latch.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => Equal0.IN0
+sel[0] => Equal1.IN0
+sel[0] => Equal2.IN1
+sel[0] => Equal3.IN0
+sel[1] => Equal0.IN1
+sel[1] => Equal1.IN1
+sel[1] => Equal2.IN0
+sel[1] => Equal3.IN1
+
+
+|mux81|mux21:cc
+in[0] => out~0.DATAA
+in[1] => out~0.DATAB
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+sel => out~0.OUTPUTSELECT
+
+

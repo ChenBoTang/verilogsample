@@ -1,0 +1,24 @@
+module counter ( out, enable, CLK, CLR, in, load, count);
+input  CLK, CLR, load, count;
+input  [3:0] in;
+output enable;
+output [3:0] out;
+reg [3:0] out;
+reg enable;
+
+always @(posedge CLK )
+begin
+if (!CLR)
+out <= 4'b0000;
+
+else if (load)
+    out = in;
+
+else if(count) 
+    {enable, out} = out + 1;
+  
+else
+   out = out;
+end   
+
+endmodule

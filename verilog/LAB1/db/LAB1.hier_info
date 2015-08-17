@@ -1,0 +1,221 @@
+|LAB1
+rst => wout~47.OUTPUTSELECT
+rst => wout~46.OUTPUTSELECT
+rst => wout~45.OUTPUTSELECT
+rst => wout~44.OUTPUTSELECT
+rst => wout~43.OUTPUTSELECT
+rst => wout~42.OUTPUTSELECT
+rst => wout~41.OUTPUTSELECT
+rst => wout~40.OUTPUTSELECT
+clk => clk~0.IN1
+chn => always0~0.IN1
+chn => out_state~6.OUTPUTSELECT
+chn => out_state~5.OUTPUTSELECT
+chn => out_state~4.OUTPUTSELECT
+chn => out_state~3.OUTPUTSELECT
+switch => auto.CLK
+A[0] <= A~0.DB_MAX_OUTPUT_PORT_TYPE
+B[0] <= A~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|bin2bcd:A3
+ONES[0] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+ONES[1] <= add3:m5.port1
+ONES[2] <= add3:m5.port1
+ONES[3] <= add3:m5.port1
+ONES[4] <= <GND>
+ONES[5] <= <GND>
+ONES[6] <= <GND>
+ONES[7] <= <GND>
+TENS[0] <= add3:m5.port1
+TENS[1] <= add3:m7.port1
+TENS[2] <= add3:m7.port1
+TENS[3] <= add3:m7.port1
+TENS[4] <= <GND>
+TENS[5] <= <GND>
+TENS[6] <= <GND>
+TENS[7] <= <GND>
+HUNDREDS[0] <= add3:m7.port1
+HUNDREDS[1] <= add3:m6.port1
+HUNDREDS[2] <= <GND>
+HUNDREDS[3] <= <GND>
+HUNDREDS[4] <= <GND>
+HUNDREDS[5] <= <GND>
+HUNDREDS[6] <= <GND>
+HUNDREDS[7] <= <GND>
+A[0] => ONES[0].DATAIN
+A[1] => d5[0].IN1
+A[2] => d4[0].IN1
+A[3] => d3[0].IN1
+A[4] => d2[0].IN1
+A[5] => d1[0].IN1
+A[6] => d1[1].IN1
+A[7] => d1[2].IN1
+
+
+|LAB1|bin2bcd:A3|add3:m1
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|bin2bcd:A3|add3:m2
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|bin2bcd:A3|add3:m3
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|bin2bcd:A3|add3:m4
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|bin2bcd:A3|add3:m5
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|bin2bcd:A3|add3:m6
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|bin2bcd:A3|add3:m7
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+out[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|seg7disp:A4
+rst => segLedOut~6.OUTPUTSELECT
+rst => segLedOut~5.OUTPUTSELECT
+rst => segLedOut~4.OUTPUTSELECT
+rst => segLedOut~3.OUTPUTSELECT
+rst => segLedOut~2.OUTPUTSELECT
+rst => segLedOut~1.OUTPUTSELECT
+rst => segLedOut~0.OUTPUTSELECT
+dataIn0[0] => Decoder0.IN7
+dataIn0[1] => Decoder0.IN6
+dataIn0[2] => Decoder0.IN5
+dataIn0[3] => Decoder0.IN4
+dataIn0[4] => Decoder0.IN3
+dataIn0[5] => Decoder0.IN2
+dataIn0[6] => Decoder0.IN1
+dataIn0[7] => Decoder0.IN0
+segLedOut[0] <= <VCC>
+segLedOut[1] <= segLedOut~6.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[2] <= segLedOut~5.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[3] <= segLedOut~4.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[4] <= segLedOut~3.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[5] <= segLedOut~2.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[6] <= segLedOut~1.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[7] <= segLedOut~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|seg7disp:A5
+rst => segLedOut~6.OUTPUTSELECT
+rst => segLedOut~5.OUTPUTSELECT
+rst => segLedOut~4.OUTPUTSELECT
+rst => segLedOut~3.OUTPUTSELECT
+rst => segLedOut~2.OUTPUTSELECT
+rst => segLedOut~1.OUTPUTSELECT
+rst => segLedOut~0.OUTPUTSELECT
+dataIn0[0] => Decoder0.IN7
+dataIn0[1] => Decoder0.IN6
+dataIn0[2] => Decoder0.IN5
+dataIn0[3] => Decoder0.IN4
+dataIn0[4] => Decoder0.IN3
+dataIn0[5] => Decoder0.IN2
+dataIn0[6] => Decoder0.IN1
+dataIn0[7] => Decoder0.IN0
+segLedOut[0] <= <VCC>
+segLedOut[1] <= segLedOut~6.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[2] <= segLedOut~5.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[3] <= segLedOut~4.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[4] <= segLedOut~3.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[5] <= segLedOut~2.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[6] <= segLedOut~1.DB_MAX_OUTPUT_PORT_TYPE
+segLedOut[7] <= segLedOut~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|LAB1|division:A1
+oclk <= oclk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => i[31].CLK
+clk => i[30].CLK
+clk => i[29].CLK
+clk => i[28].CLK
+clk => i[27].CLK
+clk => i[26].CLK
+clk => i[25].CLK
+clk => i[24].CLK
+clk => i[23].CLK
+clk => i[22].CLK
+clk => i[21].CLK
+clk => i[20].CLK
+clk => i[19].CLK
+clk => i[18].CLK
+clk => i[17].CLK
+clk => i[16].CLK
+clk => i[15].CLK
+clk => i[14].CLK
+clk => i[13].CLK
+clk => i[12].CLK
+clk => i[11].CLK
+clk => i[10].CLK
+clk => i[9].CLK
+clk => i[8].CLK
+clk => i[7].CLK
+clk => i[6].CLK
+clk => i[5].CLK
+clk => i[4].CLK
+clk => i[3].CLK
+clk => i[2].CLK
+clk => i[1].CLK
+clk => i[0].CLK
+clk => oclk~reg0.CLK
+
+

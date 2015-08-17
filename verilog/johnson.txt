@@ -1,0 +1,20 @@
+module lab (clk,x,y,z);
+input clk;
+output x,y,z;
+wire  wa,wb,wc,we; 
+D_FF_SRS m1(wa,clk,~we);
+D_FF_SRS m2(wb,clk,wa);
+D_FF_SRS m3(wc,clk,wb);
+D_FF_SRS m4(we,clk,wc);
+assign x=wa^wc;
+assign y=wb;
+assign z=~y|x;
+endmodule
+
+module D_FF_SRS (Q, CLK, D);
+input D, CLK;
+output Q;
+reg Q;
+always @(posedge CLK)
+Q = D;
+endmodule

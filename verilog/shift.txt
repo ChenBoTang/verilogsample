@@ -1,0 +1,17 @@
+module shftreg (s1,s0,A,CLK,Clr,pin);
+input s1,s0; //Select inputs
+ //Serial inputs
+input CLK,Clr; //Clock and Clear
+input [7:0] pin; //Parallel input
+output [7:0] A; //Register output
+reg [7:0] A;
+always @ (posedge CLK or negedge Clr)
+if (~Clr) A = 4'b0000;
+else
+case ({s1,s0})
+2'b00: A = pin; //No change
+2'b01: A = {1'b0,A[7:1]}; //Shift right
+2'b10: A = {2'b00,A[7:2]}; //Shift left
+2'b11: A = {3'b000,A[7:3]}; 
+endcase
+endmodule

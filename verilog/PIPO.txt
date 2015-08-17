@@ -1,0 +1,15 @@
+module PIPO (DIN, DOUT, CLK, RST, LOAD);
+input [3:0] DIN;
+input CLK, RST, LOAD;
+output [3:0] DOUT;
+reg [3:0]DOUT;
+always @(posedge CLK or posedge RST or posedge LOAD)
+begin
+ if (RST)
+  DOUT = 4'b0000;
+ else if (LOAD) 
+  DOUT = DIN;
+  else
+  DOUT = DOUT;
+end
+endmodule

@@ -1,0 +1,15 @@
+Analysis & Synthesis Status : Successful - Sat Mar 19 03:03:08 2011
+Quartus II Version : 9.0 Build 132 02/25/2009 SJ Web Edition
+Revision Name : cmp
+Top-level Entity Name : cmp
+Family : Stratix II
+Logic utilization : N/A
+    Combinational ALUTs : 6
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 11
+Total virtual pins : 0
+Total block memory bits : 0
+DSP block 9-bit elements : 0
+Total PLLs : 0
+Total DLLs : 0

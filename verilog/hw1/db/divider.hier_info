@@ -1,0 +1,158 @@
+|divider
+outd[0] <= counter:c1.port0
+outd[1] <= counter:c1.port0
+outd[2] <= counter:c1.port0
+outd[3] <= counter:c1.port0
+outd[4] <= counter:c2.port0
+outd[5] <= counter:c2.port0
+outd[6] <= counter:c2.port0
+outd[7] <= counter:c2.port0
+f_out <= <GND>
+sel[0] => sel[0]~1.IN8
+sel[1] => sel[1]~0.IN8
+clk => clk~0.IN1
+clear => clear~0.IN2
+count => count~0.IN2
+load => load~0.IN2
+
+
+|divider|MUX_4X1:mux0
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+i0 => Mux0.IN0
+i1 => Mux0.IN1
+i2 => Mux0.IN2
+i3 => Mux0.IN3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider|MUX_4X1:mux1
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+i0 => Mux0.IN0
+i1 => Mux0.IN1
+i2 => Mux0.IN2
+i3 => Mux0.IN3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider|MUX_4X1:mux2
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+i0 => Mux0.IN0
+i1 => Mux0.IN1
+i2 => Mux0.IN2
+i3 => Mux0.IN3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider|MUX_4X1:mux3
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+i0 => Mux0.IN0
+i1 => Mux0.IN1
+i2 => Mux0.IN2
+i3 => Mux0.IN3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider|MUX_4X1:mux4
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+i0 => Mux0.IN0
+i1 => Mux0.IN1
+i2 => Mux0.IN2
+i3 => Mux0.IN3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider|MUX_4X1:mux5
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+i0 => Mux0.IN0
+i1 => Mux0.IN1
+i2 => Mux0.IN2
+i3 => Mux0.IN3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider|MUX_4X1:mux6
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+i0 => Mux0.IN0
+i1 => Mux0.IN1
+i2 => Mux0.IN2
+i3 => Mux0.IN3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider|MUX_4X1:mux7
+sel[0] => Mux0.IN5
+sel[1] => Mux0.IN4
+i0 => Mux0.IN0
+i1 => Mux0.IN1
+i2 => Mux0.IN2
+i3 => Mux0.IN3
+out <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|divider|counter:c1
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => out[3]~reg0.CLK
+CLK => out[2]~reg0.CLK
+CLK => out[1]~reg0.CLK
+CLK => out[0]~reg0.CLK
+CLK => cout~reg0.CLK
+CLR => out[3]~reg0.ACLR
+CLR => out[2]~reg0.ACLR
+CLR => out[1]~reg0.ACLR
+CLR => out[0]~reg0.ACLR
+CLR => out[3]~0.IN1
+CLR => cout~reg0.ENA
+in[0] => out[0]~reg0.ADATA
+in[1] => out[1]~reg0.ADATA
+in[2] => out[2]~reg0.ADATA
+in[3] => out[3]~reg0.ADATA
+load => out[3]~0.IN0
+load => cout~0.OUTPUTSELECT
+count => cout~1.OUTPUTSELECT
+count => out[3]~reg0.ENA
+count => out[2]~reg0.ENA
+count => out[1]~reg0.ENA
+count => out[0]~reg0.ENA
+
+
+|divider|counter:c2
+out[0] <= out[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout~reg0.DB_MAX_OUTPUT_PORT_TYPE
+CLK => out[3]~reg0.CLK
+CLK => out[2]~reg0.CLK
+CLK => out[1]~reg0.CLK
+CLK => out[0]~reg0.CLK
+CLK => cout~reg0.CLK
+CLR => out[3]~reg0.ACLR
+CLR => out[2]~reg0.ACLR
+CLR => out[1]~reg0.ACLR
+CLR => out[0]~reg0.ACLR
+CLR => out[3]~0.IN1
+CLR => cout~reg0.ENA
+in[0] => out[0]~reg0.ADATA
+in[1] => out[1]~reg0.ADATA
+in[2] => out[2]~reg0.ADATA
+in[3] => out[3]~reg0.ADATA
+load => out[3]~0.IN0
+load => cout~0.OUTPUTSELECT
+count => cout~1.OUTPUTSELECT
+count => out[3]~reg0.ENA
+count => out[2]~reg0.ENA
+count => out[1]~reg0.ENA
+count => out[0]~reg0.ENA
+
+

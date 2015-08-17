@@ -1,0 +1,514 @@
+|lab
+in[0] => in[0]~31.IN1
+in[1] => in[1]~30.IN1
+in[2] => in[2]~29.IN1
+in[3] => in[3]~28.IN1
+in[4] => in[4]~27.IN1
+in[5] => in[5]~26.IN1
+in[6] => in[6]~25.IN1
+in[7] => in[7]~24.IN1
+in[8] => in[8]~23.IN1
+in[9] => in[9]~22.IN1
+in[10] => in[10]~21.IN1
+in[11] => in[11]~20.IN1
+in[12] => in[12]~19.IN1
+in[13] => in[13]~18.IN1
+in[14] => in[14]~17.IN1
+in[15] => in[15]~16.IN1
+in[16] => in[16]~15.IN1
+in[17] => in[17]~14.IN1
+in[18] => in[18]~13.IN1
+in[19] => in[19]~12.IN1
+in[20] => in[20]~11.IN1
+in[21] => in[21]~10.IN1
+in[22] => in[22]~9.IN1
+in[23] => in[23]~8.IN1
+in[24] => in[24]~7.IN1
+in[25] => in[25]~6.IN1
+in[26] => in[26]~5.IN1
+in[27] => in[27]~4.IN1
+in[28] => in[28]~3.IN1
+in[29] => in[29]~2.IN1
+in[30] => in[30]~1.IN1
+in[31] => in[31]~0.IN1
+out <= lab41:ee.port2
+sel[0] => sel[0]~4.IN4
+sel[1] => sel[1]~3.IN4
+sel[2] => sel[2]~2.IN4
+sel[3] => sel[3]~1.IN1
+sel[4] => sel[4]~0.IN1
+en => en~0.IN5
+
+
+|lab|lab42:aa
+in[0] => in[0]~7.IN1
+in[1] => in[1]~6.IN1
+in[2] => in[2]~5.IN1
+in[3] => in[3]~4.IN1
+in[4] => in[4]~3.IN1
+in[5] => in[5]~2.IN1
+in[6] => in[6]~1.IN1
+in[7] => in[7]~0.IN1
+en => en~0.IN1
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => sel[0]~2.IN1
+sel[1] => sel[1]~1.IN1
+sel[2] => sel[2]~0.IN1
+
+
+|lab|lab42:aa|decoder_3x8:xx
+i0 => Mux7.IN8
+i0 => Mux6.IN8
+i0 => Mux5.IN8
+i0 => Mux4.IN8
+i0 => Mux3.IN8
+i0 => Mux2.IN8
+i0 => Mux1.IN8
+i0 => Mux0.IN8
+i1 => Mux7.IN9
+i1 => Mux6.IN9
+i1 => Mux5.IN9
+i1 => Mux4.IN9
+i1 => Mux3.IN9
+i1 => Mux2.IN9
+i1 => Mux1.IN9
+i1 => Mux0.IN9
+i2 => Mux7.IN10
+i2 => Mux6.IN10
+i2 => Mux5.IN10
+i2 => Mux4.IN10
+i2 => Mux3.IN10
+i2 => Mux2.IN10
+i2 => Mux1.IN10
+i2 => Mux0.IN10
+en => out[0]$latch.ACLR
+en => out[1]$latch.ACLR
+en => out[2]$latch.ACLR
+en => out[3]$latch.ACLR
+en => out[4]$latch.ACLR
+en => out[5]$latch.ACLR
+en => out[6]$latch.ACLR
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= <GND>
+
+
+|lab|lab42:aa|tri_state:aa
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:aa|tri_state:bb
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:aa|tri_state:cc
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:aa|tri_state:dd
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:aa|tri_state:ee
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:aa|tri_state:ff
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:aa|tri_state:gg
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:aa|tri_state:hh
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:bb
+in[0] => in[0]~7.IN1
+in[1] => in[1]~6.IN1
+in[2] => in[2]~5.IN1
+in[3] => in[3]~4.IN1
+in[4] => in[4]~3.IN1
+in[5] => in[5]~2.IN1
+in[6] => in[6]~1.IN1
+in[7] => in[7]~0.IN1
+en => en~0.IN1
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => sel[0]~2.IN1
+sel[1] => sel[1]~1.IN1
+sel[2] => sel[2]~0.IN1
+
+
+|lab|lab42:bb|decoder_3x8:xx
+i0 => Mux7.IN8
+i0 => Mux6.IN8
+i0 => Mux5.IN8
+i0 => Mux4.IN8
+i0 => Mux3.IN8
+i0 => Mux2.IN8
+i0 => Mux1.IN8
+i0 => Mux0.IN8
+i1 => Mux7.IN9
+i1 => Mux6.IN9
+i1 => Mux5.IN9
+i1 => Mux4.IN9
+i1 => Mux3.IN9
+i1 => Mux2.IN9
+i1 => Mux1.IN9
+i1 => Mux0.IN9
+i2 => Mux7.IN10
+i2 => Mux6.IN10
+i2 => Mux5.IN10
+i2 => Mux4.IN10
+i2 => Mux3.IN10
+i2 => Mux2.IN10
+i2 => Mux1.IN10
+i2 => Mux0.IN10
+en => out[0]$latch.ACLR
+en => out[1]$latch.ACLR
+en => out[2]$latch.ACLR
+en => out[3]$latch.ACLR
+en => out[4]$latch.ACLR
+en => out[5]$latch.ACLR
+en => out[6]$latch.ACLR
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= <GND>
+
+
+|lab|lab42:bb|tri_state:aa
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:bb|tri_state:bb
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:bb|tri_state:cc
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:bb|tri_state:dd
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:bb|tri_state:ee
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:bb|tri_state:ff
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:bb|tri_state:gg
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:bb|tri_state:hh
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:cc
+in[0] => in[0]~7.IN1
+in[1] => in[1]~6.IN1
+in[2] => in[2]~5.IN1
+in[3] => in[3]~4.IN1
+in[4] => in[4]~3.IN1
+in[5] => in[5]~2.IN1
+in[6] => in[6]~1.IN1
+in[7] => in[7]~0.IN1
+en => en~0.IN1
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => sel[0]~2.IN1
+sel[1] => sel[1]~1.IN1
+sel[2] => sel[2]~0.IN1
+
+
+|lab|lab42:cc|decoder_3x8:xx
+i0 => Mux7.IN8
+i0 => Mux6.IN8
+i0 => Mux5.IN8
+i0 => Mux4.IN8
+i0 => Mux3.IN8
+i0 => Mux2.IN8
+i0 => Mux1.IN8
+i0 => Mux0.IN8
+i1 => Mux7.IN9
+i1 => Mux6.IN9
+i1 => Mux5.IN9
+i1 => Mux4.IN9
+i1 => Mux3.IN9
+i1 => Mux2.IN9
+i1 => Mux1.IN9
+i1 => Mux0.IN9
+i2 => Mux7.IN10
+i2 => Mux6.IN10
+i2 => Mux5.IN10
+i2 => Mux4.IN10
+i2 => Mux3.IN10
+i2 => Mux2.IN10
+i2 => Mux1.IN10
+i2 => Mux0.IN10
+en => out[0]$latch.ACLR
+en => out[1]$latch.ACLR
+en => out[2]$latch.ACLR
+en => out[3]$latch.ACLR
+en => out[4]$latch.ACLR
+en => out[5]$latch.ACLR
+en => out[6]$latch.ACLR
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= <GND>
+
+
+|lab|lab42:cc|tri_state:aa
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:cc|tri_state:bb
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:cc|tri_state:cc
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:cc|tri_state:dd
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:cc|tri_state:ee
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:cc|tri_state:ff
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:cc|tri_state:gg
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:cc|tri_state:hh
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:dd
+in[0] => in[0]~7.IN1
+in[1] => in[1]~6.IN1
+in[2] => in[2]~5.IN1
+in[3] => in[3]~4.IN1
+in[4] => in[4]~3.IN1
+in[5] => in[5]~2.IN1
+in[6] => in[6]~1.IN1
+in[7] => in[7]~0.IN1
+en => en~0.IN1
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => sel[0]~2.IN1
+sel[1] => sel[1]~1.IN1
+sel[2] => sel[2]~0.IN1
+
+
+|lab|lab42:dd|decoder_3x8:xx
+i0 => Mux7.IN8
+i0 => Mux6.IN8
+i0 => Mux5.IN8
+i0 => Mux4.IN8
+i0 => Mux3.IN8
+i0 => Mux2.IN8
+i0 => Mux1.IN8
+i0 => Mux0.IN8
+i1 => Mux7.IN9
+i1 => Mux6.IN9
+i1 => Mux5.IN9
+i1 => Mux4.IN9
+i1 => Mux3.IN9
+i1 => Mux2.IN9
+i1 => Mux1.IN9
+i1 => Mux0.IN9
+i2 => Mux7.IN10
+i2 => Mux6.IN10
+i2 => Mux5.IN10
+i2 => Mux4.IN10
+i2 => Mux3.IN10
+i2 => Mux2.IN10
+i2 => Mux1.IN10
+i2 => Mux0.IN10
+en => out[0]$latch.ACLR
+en => out[1]$latch.ACLR
+en => out[2]$latch.ACLR
+en => out[3]$latch.ACLR
+en => out[4]$latch.ACLR
+en => out[5]$latch.ACLR
+en => out[6]$latch.ACLR
+out[0] <= out[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= <GND>
+
+
+|lab|lab42:dd|tri_state:aa
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:dd|tri_state:bb
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:dd|tri_state:cc
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:dd|tri_state:dd
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:dd|tri_state:ee
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:dd|tri_state:ff
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:dd|tri_state:gg
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab42:dd|tri_state:hh
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab41:ee
+in[0] => in[0]~3.IN1
+in[1] => in[1]~2.IN1
+in[2] => in[2]~1.IN1
+in[3] => in[3]~0.IN1
+en => en~0.IN1
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => sel[0]~1.IN1
+sel[1] => sel[1]~0.IN1
+
+
+|lab|lab41:ee|decoder_2x4:xx
+i0 => Decoder0.IN0
+i1 => Decoder0.IN1
+en => out~3.OUTPUTSELECT
+en => out~2.OUTPUTSELECT
+en => out~1.OUTPUTSELECT
+en => out~0.OUTPUTSELECT
+out[0] <= out~3.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out~2.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out~1.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|lab|lab41:ee|tri_state:aa
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab41:ee|tri_state:bb
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab41:ee|tri_state:cc
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+
+|lab|lab41:ee|tri_state:dd
+out <= out~0.DB_MAX_OUTPUT_PORT_TYPE
+in => out~0.DATAIN
+en => out~0.OE
+
+

@@ -1,0 +1,38 @@
+|cmp
+a[0] => a_gt_b~9.IN0
+a[0] => x~0.IN0
+a[0] => a_lt_b~7.IN0
+a[0] => x~1.IN0
+a[1] => a_gt_b~4.IN0
+a[1] => x~2.IN0
+a[1] => a_lt_b~4.IN0
+a[1] => x~3.IN0
+a[2] => a_gt_b~1.IN0
+a[2] => x~4.IN0
+a[2] => a_lt_b~1.IN0
+a[2] => x~5.IN0
+a[3] => a_gt_b~0.IN0
+a[3] => x~6.IN0
+a[3] => a_lt_b~0.IN0
+a[3] => x~7.IN0
+b[0] => a_lt_b~8.IN0
+b[0] => x~0.IN1
+b[0] => a_gt_b~10.IN0
+b[0] => x~1.IN1
+b[1] => a_lt_b~5.IN0
+b[1] => x~2.IN1
+b[1] => a_gt_b~5.IN0
+b[1] => x~3.IN1
+b[2] => a_lt_b~2.IN0
+b[2] => x~4.IN1
+b[2] => a_gt_b~2.IN0
+b[2] => x~5.IN1
+b[3] => a_lt_b~0.IN1
+b[3] => x~6.IN1
+b[3] => a_gt_b~0.IN1
+b[3] => x~7.IN1
+a_eq_b <= a_eq_b~2.DB_MAX_OUTPUT_PORT_TYPE
+a_gt_b <= a_gt_b~11.DB_MAX_OUTPUT_PORT_TYPE
+a_lt_b <= a_lt_b~9.DB_MAX_OUTPUT_PORT_TYPE
+
+

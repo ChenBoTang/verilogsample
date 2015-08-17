@@ -1,0 +1,363 @@
+Analysis & Synthesis report for lab
+Thu Mar 17 18:02:20 2011
+Quartus II Version 9.0 Build 132 02/25/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. User-Specified and Inferred Latches
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                            ;
++-------------------------------+-----------------------------------------+
+; Analysis & Synthesis Status   ; Successful - Thu Mar 17 18:02:17 2011   ;
+; Quartus II Version            ; 9.0 Build 132 02/25/2009 SJ Web Edition ;
+; Revision Name                 ; lab                                     ;
+; Top-level Entity Name         ; lab                                     ;
+; Family                        ; Stratix II                              ;
+; Logic utilization             ; N/A                                     ;
+;     Combinational ALUTs       ; 32                                      ;
+;     Dedicated logic registers ; 0                                       ;
+; Total registers               ; 0                                       ;
+; Total pins                    ; 39                                      ;
+; Total virtual pins            ; 0                                       ;
+; Total block memory bits       ; 0                                       ;
+; DSP block 9-bit elements      ; 0                                       ;
+; Total PLLs                    ; 0                                       ;
+; Total DLLs                    ; 0                                       ;
++-------------------------------+-----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                            ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Option                                                         ; Setting            ; Default Value      ;
++----------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                          ; lab                ; lab                ;
+; Family name                                                    ; Stratix II         ; Stratix II         ;
+; Use Generated Physical Constraints File                        ; Off                ;                    ;
+; Use smart compilation                                          ; Off                ; Off                ;
+; Restructure Multiplexers                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                            ; Off                ; Off                ;
+; Preserve fewer node names                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                      ; Off                ; Off                ;
+; Verilog Version                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                       ; Auto               ; Auto               ;
+; Safe State Machine                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                              ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                     ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                 ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                        ; On                 ; On                 ;
+; Parallel Synthesis                                             ; Off                ; Off                ;
+; DSP Block Balancing                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                 ; Off                ; Off                ;
+; Optimization Technique                                         ; Balanced           ; Balanced           ;
+; Carry Chain Length                                             ; 70                 ; 70                 ;
+; Auto Carry Chains                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                          ; Off                ; Off                ;
+; Auto ROM Replacement                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                           ; On                 ; On                 ;
+; Auto DSP Block Replacement                                     ; On                 ; On                 ;
+; Auto Shift Register Replacement                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                  ; On                 ; On                 ;
+; Strict RAM Replacement                                         ; Off                ; Off                ;
+; Allow Synchronous Control Signals                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                         ; Off                ; Off                ;
+; Auto RAM Block Balancing                                       ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                              ; Off                ; Off                ;
+; Auto Resource Sharing                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                  ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing            ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives              ; Off                ; Off                ;
+; Timing-Driven Synthesis                                        ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                             ; Off                ; Off                ;
+; Synchronization Register Chain Length                          ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report       ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report      ; 100                ; 100                ;
+; Clock MUX Protection                                           ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                    ; Off                ; Off                ;
+; Block Design Naming                                            ; Auto               ; Auto               ;
+; SDC constraint protection                                      ; Off                ; Off                ;
+; Synthesis Effort                                               ; Auto               ; Auto               ;
+; Allows Asynchronous Clear Usage For Shift Register Replacement ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                             ; Medium             ; Medium             ;
++----------------------------------------------------------------+--------------------+--------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                             ;
++----------------------------------+-----------------+------------------------------+--------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path   ;
++----------------------------------+-----------------+------------------------------+--------------------------------+
+; lab.v                            ; yes             ; User Verilog HDL File        ; G:/祘Α龟策/lab6/lab.v       ;
+; tri_state.v                      ; yes             ; User Verilog HDL File        ; G:/祘Α龟策/lab6/tri_state.v ;
+; lab42.v                          ; yes             ; Auto-Found Verilog HDL File  ; G:/祘Α龟策/lab6/lab42.v     ;
+; lab41.v                          ; yes             ; Auto-Found Verilog HDL File  ; G:/祘Α龟策/lab6/lab41.v     ;
++----------------------------------+-----------------+------------------------------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++-----------------------------------------------+-------+
+; Resource                                      ; Usage ;
++-----------------------------------------------+-------+
+; Estimated ALUTs Used                          ; 32    ;
+; Dedicated logic registers                     ; 0     ;
+;                                               ;       ;
+; Estimated ALUTs Unavailable                   ; 5     ;
+;                                               ;       ;
+; Total combinational functions                 ; 32    ;
+; Combinational ALUT usage by number of inputs  ;       ;
+;     -- 7 input functions                      ; 0     ;
+;     -- 6 input functions                      ; 10    ;
+;     -- 5 input functions                      ; 1     ;
+;     -- 4 input functions                      ; 9     ;
+;     -- <=3 input functions                    ; 12    ;
+;                                               ;       ;
+; Combinational ALUTs by mode                   ;       ;
+;     -- normal mode                            ; 32    ;
+;     -- extended LUT mode                      ; 0     ;
+;     -- arithmetic mode                        ; 0     ;
+;     -- shared arithmetic mode                 ; 0     ;
+;                                               ;       ;
+; Estimated ALUT/register pairs used            ; 32    ;
+;                                               ;       ;
+; Total registers                               ; 0     ;
+;     -- Dedicated logic registers              ; 0     ;
+;     -- I/O registers                          ; 0     ;
+;                                               ;       ;
+; Estimated ALMs:  partially or completely used ; 16    ;
+;                                               ;       ;
+; I/O pins                                      ; 39    ;
+; Maximum fan-out node                          ; en    ;
+; Maximum fan-out                               ; 9     ;
+; Total fan-out                                 ; 132   ;
+; Average fan-out                               ; 1.86  ;
++-----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name          ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+------------------------------+--------------+
+; |lab                       ; 32 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 39   ; 0            ; |lab                         ; work         ;
+;    |lab41:ee|              ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lab|lab41:ee                ; work         ;
+;       |tri_state:aa|       ; 4 (4)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lab|lab41:ee|tri_state:aa   ; work         ;
+;       |tri_state:bb|       ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lab|lab41:ee|tri_state:bb   ; work         ;
+;       |tri_state:cc|       ; 3 (3)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lab|lab41:ee|tri_state:cc   ; work         ;
+;       |tri_state:dd|       ; 6 (6)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lab|lab41:ee|tri_state:dd   ; work         ;
+;    |lab42:dd|              ; 16 (0)            ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lab|lab42:dd                ; work         ;
+;       |decoder_3x8:xx|     ; 15 (15)           ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lab|lab42:dd|decoder_3x8:xx ; work         ;
+;       |tri_state:gg|       ; 1 (1)             ; 0 (0)        ; 0                 ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |lab|lab42:dd|tri_state:gg   ; work         ;
++----------------------------+-------------------+--------------+-------------------+--------------+---------+-----------+-----------+------+--------------+------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++-----------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal          ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------+------------------------+
+; lab42:dd|decoder_3x8:xx|out[6]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:dd|decoder_3x8:xx|out[5]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:dd|decoder_3x8:xx|out[4]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:dd|decoder_3x8:xx|out[3]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:dd|decoder_3x8:xx|out[2]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:dd|decoder_3x8:xx|out[1]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:dd|decoder_3x8:xx|out[0]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:cc|decoder_3x8:xx|out[6]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:cc|decoder_3x8:xx|out[5]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:cc|decoder_3x8:xx|out[4]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:cc|decoder_3x8:xx|out[3]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:cc|decoder_3x8:xx|out[2]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:cc|decoder_3x8:xx|out[1]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:cc|decoder_3x8:xx|out[0]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:bb|decoder_3x8:xx|out[6]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:bb|decoder_3x8:xx|out[5]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:bb|decoder_3x8:xx|out[4]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:bb|decoder_3x8:xx|out[3]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:bb|decoder_3x8:xx|out[2]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:bb|decoder_3x8:xx|out[1]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:bb|decoder_3x8:xx|out[0]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:aa|decoder_3x8:xx|out[6]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:aa|decoder_3x8:xx|out[5]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:aa|decoder_3x8:xx|out[4]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:aa|decoder_3x8:xx|out[3]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:aa|decoder_3x8:xx|out[2]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:aa|decoder_3x8:xx|out[1]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; lab42:aa|decoder_3x8:xx|out[0]                      ; lab42:dd|decoder_3x8:xx|Mux0 ; yes                    ;
+; Number of user-specified and inferred latches = 28  ;                              ;                        ;
++-----------------------------------------------------+------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 9.0 Build 132 02/25/2009 SJ Web Edition
+    Info: Processing started: Thu Mar 17 18:01:22 2011
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab -c lab
+Info: Found 1 design units, including 1 entities, in source file lab.v
+    Info: Found entity 1: lab
+Info: Found 1 design units, including 1 entities, in source file tri_state.v
+    Info: Found entity 1: tri_state
+Info: Elaborating entity "lab" for the top level hierarchy
+Warning (10229): Verilog HDL Expression warning at lab42.v(35): truncated literal to match 2 bits
+Warning: Using design file lab42.v, which is not specified as a design file for the current project, but contains definitions for 2 design units and 2 entities in project
+    Info: Found entity 1: lab42
+    Info: Found entity 2: decoder_3x8
+Info: Elaborating entity "lab42" for hierarchy "lab42:aa"
+Info: Elaborating entity "decoder_3x8" for hierarchy "lab42:aa|decoder_3x8:xx"
+Warning (10235): Verilog HDL Always Construct warning at lab42.v(27): variable "i2" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at lab42.v(27): variable "i1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at lab42.v(27): variable "i0" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10272): Verilog HDL Case Statement warning at lab42.v(35): case item expression covers a value already covered by a previous case item
+Warning (10270): Verilog HDL Case Statement warning at lab42.v(27): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at lab42.v(23): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "out[0]" at lab42.v(40)
+Info (10041): Inferred latch for "out[1]" at lab42.v(40)
+Info (10041): Inferred latch for "out[2]" at lab42.v(40)
+Info (10041): Inferred latch for "out[3]" at lab42.v(40)
+Info (10041): Inferred latch for "out[4]" at lab42.v(40)
+Info (10041): Inferred latch for "out[5]" at lab42.v(40)
+Info (10041): Inferred latch for "out[6]" at lab42.v(40)
+Info (10041): Inferred latch for "out[7]" at lab42.v(40)
+Info: Elaborating entity "tri_state" for hierarchy "lab42:aa|tri_state:aa"
+Warning (10235): Verilog HDL Always Construct warning at tri_state.v(6): variable "in" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning: Using design file lab41.v, which is not specified as a design file for the current project, but contains definitions for 2 design units and 2 entities in project
+    Info: Found entity 1: lab41
+    Info: Found entity 2: decoder_2x4
+Info: Elaborating entity "lab41" for hierarchy "lab41:ee"
+Info: Elaborating entity "decoder_2x4" for hierarchy "lab41:ee|decoder_2x4:xx"
+Warning (10235): Verilog HDL Always Construct warning at lab41.v(23): variable "i1" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning (10235): Verilog HDL Always Construct warning at lab41.v(23): variable "i0" is read inside the Always Construct but isn't in the Always Construct's Event Control
+Warning: Removed fan-outs from the following always-disabled I/O buffers
+    Warning: Removed fan-out from the always-disabled I/O buffer "lab42:dd|tri_state:hh|out" to the node "lab41:ee|tri_state:dd|out"
+    Warning: Removed fan-out from the always-disabled I/O buffer "lab42:cc|tri_state:hh|out" to the node "lab41:ee|tri_state:cc|out"
+    Warning: Removed fan-out from the always-disabled I/O buffer "lab42:bb|tri_state:hh|out" to the node "lab41:ee|tri_state:bb|out"
+    Warning: Removed fan-out from the always-disabled I/O buffer "lab42:aa|tri_state:hh|out" to the node "lab41:ee|tri_state:aa|out"
+Warning: Tri-state node(s) do not directly drive top-level pin(s)
+    Warning: Converted the fan-out from the tri-state buffer "lab42:dd|tri_state:gg|out" to the node "lab41:ee|tri_state:dd|out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lab42:cc|tri_state:gg|out" to the node "lab41:ee|tri_state:cc|out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lab42:bb|tri_state:gg|out" to the node "lab41:ee|tri_state:bb|out" into an OR gate
+    Warning: Converted the fan-out from the tri-state buffer "lab42:aa|tri_state:gg|out" to the node "lab41:ee|tri_state:aa|out" into an OR gate
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "lab42:cc|decoder_3x8:xx|out[6]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[6]"
+    Info: Duplicate LATCH primitive "lab42:bb|decoder_3x8:xx|out[6]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[6]"
+    Info: Duplicate LATCH primitive "lab42:aa|decoder_3x8:xx|out[6]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[6]"
+    Info: Duplicate LATCH primitive "lab42:cc|decoder_3x8:xx|out[5]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[5]"
+    Info: Duplicate LATCH primitive "lab42:bb|decoder_3x8:xx|out[5]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[5]"
+    Info: Duplicate LATCH primitive "lab42:aa|decoder_3x8:xx|out[5]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[5]"
+    Info: Duplicate LATCH primitive "lab42:cc|decoder_3x8:xx|out[4]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[4]"
+    Info: Duplicate LATCH primitive "lab42:bb|decoder_3x8:xx|out[4]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[4]"
+    Info: Duplicate LATCH primitive "lab42:aa|decoder_3x8:xx|out[4]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[4]"
+    Info: Duplicate LATCH primitive "lab42:cc|decoder_3x8:xx|out[3]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[3]"
+    Info: Duplicate LATCH primitive "lab42:bb|decoder_3x8:xx|out[3]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[3]"
+    Info: Duplicate LATCH primitive "lab42:aa|decoder_3x8:xx|out[3]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[3]"
+    Info: Duplicate LATCH primitive "lab42:cc|decoder_3x8:xx|out[2]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[2]"
+    Info: Duplicate LATCH primitive "lab42:bb|decoder_3x8:xx|out[2]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[2]"
+    Info: Duplicate LATCH primitive "lab42:aa|decoder_3x8:xx|out[2]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[2]"
+    Info: Duplicate LATCH primitive "lab42:cc|decoder_3x8:xx|out[1]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[1]"
+    Info: Duplicate LATCH primitive "lab42:bb|decoder_3x8:xx|out[1]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[1]"
+    Info: Duplicate LATCH primitive "lab42:aa|decoder_3x8:xx|out[1]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[1]"
+    Info: Duplicate LATCH primitive "lab42:cc|decoder_3x8:xx|out[0]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[0]"
+    Info: Duplicate LATCH primitive "lab42:bb|decoder_3x8:xx|out[0]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[0]"
+    Info: Duplicate LATCH primitive "lab42:aa|decoder_3x8:xx|out[0]" merged with LATCH primitive "lab42:dd|decoder_3x8:xx|out[0]"
+Warning: Latch lab42:dd|decoder_3x8:xx|out[6] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sel[1]
+Warning: Latch lab42:dd|decoder_3x8:xx|out[5] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sel[2]
+Warning: Latch lab42:dd|decoder_3x8:xx|out[4] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sel[1]
+Warning: Latch lab42:dd|decoder_3x8:xx|out[3] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sel[1]
+Warning: Latch lab42:dd|decoder_3x8:xx|out[2] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sel[1]
+Warning: Latch lab42:dd|decoder_3x8:xx|out[1] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sel[1]
+Warning: Latch lab42:dd|decoder_3x8:xx|out[0] has unsafe behavior
+    Warning: Ports D and ENA on the latch are fed by the same signal sel[1]
+Warning: Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "in[31]"
+    Warning (15610): No output dependent on input pin "in[23]"
+    Warning (15610): No output dependent on input pin "in[15]"
+    Warning (15610): No output dependent on input pin "in[7]"
+Info: Implemented 71 device resources after synthesis - the final resource count might be different
+    Info: Implemented 38 input pins
+    Info: Implemented 1 output pins
+    Info: Implemented 32 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 171 megabytes
+    Info: Processing ended: Thu Mar 17 18:02:27 2011
+    Info: Elapsed time: 00:01:05
+    Info: Total CPU time (on all processors): 00:00:03
+
+

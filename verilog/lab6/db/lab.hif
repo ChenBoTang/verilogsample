@@ -1,0 +1,279 @@
+Version 9.0 Build 132 02/25/2009 SJ Web Edition
+7
+3344
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+lab
+# storage
+db|lab.(0).cnf
+db|lab.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab.v
+ccf11fe2383d3e8f3581a2c4ac4fcbb9
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+lab42
+# storage
+db|lab.(1).cnf
+db|lab.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab42.v
+e6745e4631a588c45a459de6e6e8ae
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+lab42:aa
+lab42:bb
+lab42:cc
+lab42:dd
+}
+# macro_sequence
+
+# end
+# entity
+decoder_3x8
+# storage
+db|lab.(2).cnf
+db|lab.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab42.v
+e6745e4631a588c45a459de6e6e8ae
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+lab42:aa|decoder_3x8:xx
+lab42:bb|decoder_3x8:xx
+lab42:cc|decoder_3x8:xx
+lab42:dd|decoder_3x8:xx
+}
+# macro_sequence
+
+# end
+# entity
+tri_state
+# storage
+db|lab.(3).cnf
+db|lab.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+tri_state.v
+4b3954f8a66211befe85cd68fcbac4ec
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+lab42:aa|tri_state:aa
+lab42:aa|tri_state:bb
+lab42:aa|tri_state:cc
+lab42:aa|tri_state:dd
+lab42:aa|tri_state:ee
+lab42:aa|tri_state:ff
+lab42:aa|tri_state:gg
+lab42:aa|tri_state:hh
+lab42:bb|tri_state:aa
+lab42:bb|tri_state:bb
+lab42:bb|tri_state:cc
+lab42:bb|tri_state:dd
+lab42:bb|tri_state:ee
+lab42:bb|tri_state:ff
+lab42:bb|tri_state:gg
+lab42:bb|tri_state:hh
+lab42:cc|tri_state:aa
+lab42:cc|tri_state:bb
+lab42:cc|tri_state:cc
+lab42:cc|tri_state:dd
+lab42:cc|tri_state:ee
+lab42:cc|tri_state:ff
+lab42:cc|tri_state:gg
+lab42:cc|tri_state:hh
+lab42:dd|tri_state:aa
+lab42:dd|tri_state:bb
+lab42:dd|tri_state:cc
+lab42:dd|tri_state:dd
+lab42:dd|tri_state:ee
+lab42:dd|tri_state:ff
+lab42:dd|tri_state:gg
+lab42:dd|tri_state:hh
+lab41:ee|tri_state:aa
+lab41:ee|tri_state:bb
+lab41:ee|tri_state:cc
+lab41:ee|tri_state:dd
+}
+# macro_sequence
+
+# end
+# entity
+lab41
+# storage
+db|lab.(4).cnf
+db|lab.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab41.v
+5c883239c5109d6631dd47fa6569dd1c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+lab41:ee
+}
+# macro_sequence
+
+# end
+# entity
+decoder_2x4
+# storage
+db|lab.(5).cnf
+db|lab.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lab41.v
+5c883239c5109d6631dd47fa6569dd1c
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+lab41:ee|decoder_2x4:xx
+}
+# macro_sequence
+
+# end
+# complete
+

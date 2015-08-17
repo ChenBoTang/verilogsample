@@ -1,0 +1,273 @@
+module LAB1(go,plus_one,rst,clk,start,LED,ones,tens,rd_out,ONES,TENS,done,oclk1,wout);
+ 
+input rst,clk,start,plus_one,go;
+output LED,ones,tens,rd_out,ONES,TENS,done,oclk1,wout;
+
+
+reg [4:0]out_state,out_state1;
+reg [7:0] A,B;
+reg [7:0]wout=8'b00000000;
+wire[7:0]C,D;
+reg [7:0] LED=8'b00000000;
+reg done=1'b1;
+reg [4:0] guass_0,guass_1,guass_2,guass_3,guass_4,guass_5,guass_6,guass_7,guass_8,guass_9;
+
+wire [4:0]rd_out;
+wire [7:0]ONES,TENS,ones,tens,C1,D1;
+wire oclk,oclk1;
+assign oclk1=(oclk & ~done);
+assign C=C1;
+assign D=D1;
+
+
+division A2(oclk,clk);
+LFSR A3(oclk,rd_out,rst,ONES,TENS);
+bin2bcd A4(C1,D1,,wout);
+seg7disp A5(1'b1,A,ones,C,done);
+seg7disp A6(1'b1,B,tens,D,done);
+
+parameter S0=5'b00000,S1=5'b00001,S2=5'b00010,S3=5'b00011,S4=5'b000100,S5=5'b000101,
+          S6=5'b00110,S7=5'b00111,S8=5'b01000,S9=5'b01001,S10=5'b01010,S11=5'b01011,
+          S12=5'b01100,S13=5'b01101,S14=5'b01110,S15=5'b01111,S16=5'b10000,S17=5'b10001,
+          S18=5'b10010,S19=5'b10011,S20=5'b10100,S21=5'b10101,S22=5'b10110;
+
+
+always@(negedge rst or negedge plus_one )
+begin
+if(~rst)
+begin
+ wout <=8'b00000000;
+ end
+else if (~plus_one)
+ begin
+  if(wout < 31)
+     
+      wout <= wout + 8'b00000001;
+     
+   else if (wout == 31)
+	wout <= 8'b00000000;
+  
+end
+
+end
+
+
+ 
+ always@(negedge start or negedge rst )
+ begin
+   if(~rst)
+    begin
+    out_state1=S1;
+    LED=8'h00;
+    end
+   else if(~start)
+   begin
+	case(out_state1)
+	  
+	 S1:
+	    begin
+		   if(guass_0==wout[5:0])
+	         begin
+			  LED<=8'b00000001;
+			  out_state1=S2;
+			 end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;
+	    end
+	S2:
+	     begin
+	        if(guass_1==wout[5:0])
+	         begin
+			  LED<=LED<<1;
+			  out_state1=S3;
+			end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;
+		  end
+	      
+	 S3:  
+	     begin
+	        if(guass_2==wout[5:0])
+	         begin
+			 LED<=LED<<1;
+			 out_state1=S4;
+			end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;
+		  end
+	 S4:  
+	     begin
+	        if(guass_3==wout[5:0])
+	         begin
+			 LED<=LED<<1;
+			 out_state1=S5;
+			end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;	
+		     end	 
+	 S5:  
+	     begin
+	        if(guass_4==wout[5:0])
+	         begin
+			 LED=LED<<1;
+			 out_state1=S6;
+			end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;
+		  end
+	     
+	 S6:  
+	     begin
+	        if(guass_5==wout[5:0])
+	         begin
+			 LED=LED<<1;
+			 out_state1=S7;
+			end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;  
+		     end
+     S7:  
+	     begin
+	        if(guass_6==wout[5:0])
+	         begin
+			 LED=LED<<1;
+			 out_state1=S8;
+			end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;
+		     end	
+     S8:  
+	     begin
+	        if(guass_7==wout[5:0])
+	         begin
+			 LED=LED<<1;
+			 out_state1=S9;
+			end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;
+		     end		
+     S9:  
+	     begin
+	        if(guass_8==wout[5:0])
+	         begin
+			 LED=8'h00;
+			 out_state1=S10;
+			end
+		   else
+		     LED=8'b11111111;
+		     out_state1=S1;	
+		     end
+     S10:  
+	     begin
+	        if(guass_9==wout[5:0])
+	         begin
+			 LED=8'hFF;
+			 end
+		   else
+		     LED=8'h00;
+		     out_state1=S1;			 
+	 
+	      end
+     endcase
+
+ end
+ 
+ end
+always@(posedge oclk1 or negedge rst or negedge go )
+begin
+     if(~rst)
+        begin
+         out_state=S1;
+         A=8'h00;
+         B=8'h00;
+         done=1;
+        end
+  else if(~go)
+     done=0;      
+ 
+     
+  else if(oclk1)
+  begin
+    case (out_state)
+ 
+  S1: begin 
+            A = ONES;
+            B =	TENS;
+            out_state=S2;
+            guass_0=rd_out;			
+      end        
+  S2: begin 
+            A=ONES;
+            B=TENS;
+            out_state=S3;
+           guass_1=rd_out; 
+      end
+  S3: begin
+            A=ONES;
+            B=TENS;
+            out_state=S4;
+			guass_2=rd_out; 
+      end
+  S4: begin
+             A=ONES;
+             B=TENS;
+             out_state=S5;
+			guass_3=rd_out;
+      end
+  S5: begin
+             A=ONES;
+             B=TENS;
+          	 out_state=S6;
+          	 guass_4=rd_out;
+      end
+  S6: begin
+             A=ONES;
+             B=TENS;
+            out_state=S7;
+            guass_5=rd_out;
+      end
+	  
+  S7: begin
+             A=ONES;
+             B=TENS;
+           	out_state=S8;
+           	guass_6=rd_out;
+      end
+  S8: begin
+             A=ONES;
+             B=TENS;
+             out_state=S9;
+             guass_7=rd_out;
+      end
+  S9: begin
+            A=ONES;
+            B=TENS;
+            out_state=S10;
+            guass_8=rd_out;
+      end
+  S10: begin
+             A=ONES;
+             B=TENS;
+          	 out_state=S11;
+          	 guass_9=rd_out;
+			  end
+ S11:   done=1;
+ 
+  default: out_state=S0;
+                          
+        endcase
+    end
+ end
+
+
+ 
+ 
+endmodule 

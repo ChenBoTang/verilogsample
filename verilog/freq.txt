@@ -1,0 +1,34 @@
+module freq (fout, out, CLK, RST);
+input  CLK, RST;
+output [3:0] out;
+output  fout ;
+reg  fout;
+reg  [3:0] out ;
+parameter count = 12;
+
+
+always @(posedge CLK)
+
+begin
+ if (out == 4'b0000)
+ out =count;
+else if (!RST)
+  fout = 0;
+
+else if (RST && out != 4'b0001)
+begin
+  out = out - 4'b0001;
+      fout = 0; 
+end   
+else if (out == 4'b0001 && fout == 0)
+begin
+     fout = 1;
+       out = 4'b1100;  
+       end 
+              end   
+
+
+
+
+
+endmodule

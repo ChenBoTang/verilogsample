@@ -1,0 +1,47 @@
+module divider(out, f_out, select, load, clk, clear, count);
+output [7:0] out;
+output f_out;
+input select, load, clk, clear, count;
+reg [7:0] out;
+reg f_out;
+
+endmodule
+;------------------------------------------------------------
+module counter ( out, cout, CLK, CLR, in, load, count);
+input  CLK, CLR, load, count;
+input  [3:0] in;
+output cout;
+output [3:0] out;
+reg [3:0] out;
+reg cout;
+
+always @(posedge CLK )
+begin
+if (!CLR)
+out = 4'b0000;
+
+else if (load)
+    out = in;
+
+else if (count) 
+    {cout, out} = out - 1;
+  
+else
+   out = out;
+end   
+
+endmodule
+;-----------------------------------------------------------------
+module MUX_8X1(sel, i0, i1, i2, i3, out);
+input i0, i1, i2, i3;
+input [1:0] sel;
+output out;
+reg out;
+always @(sel or i0 or i1 or i2 or i3)
+case(sel)
+2'b00: out = i0;
+2'b01: out = i1;
+2'b10: out = i2;
+2'b11: out = i3;
+endcase
+endmodule

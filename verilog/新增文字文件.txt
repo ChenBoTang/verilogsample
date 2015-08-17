@@ -1,0 +1,44 @@
+module MUX_32X1(sel, i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, out);
+input [2:0]i0, i1, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12, i13, i14, i15, i16, i17, i18, i19, i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31;
+input [4:0]sel;
+output [2:0]out;
+wire [2:0]out0, out1, out2, out3;
+
+MUX_8X1 mux_0(sel[2:0], i0, i1, i2, i3, i4, i5, i6, i7, out0);
+MUX_8X1 mux_1(sel[2:0], i8, i9, i10, i11, i12, i13, i14, i15, out1);
+MUX_8X1 mux_2(sel[2:0], i16, i17, i18, i19, i20, i21, i22, i23, out2);
+MUX_8X1 mux_3(sel[2:0], i24, i25, i26, i27, i28, i29, i30, i31, out3);
+MUX_4X1 mux4(sel[4:3], out0, out1, out2, out3, out);
+endmodule
+
+module MUX_8X1(sel, i0, i1, i2, i3, i4, i5, i6, i7, out);
+input [2:0]i0, i1, i2, i3, i4, i5, i6, i7;
+input [2:0]sel;
+output [2:0]out;
+reg [2:0]out;
+always @(sel or i0 or i1 or i2 or i3 or i4 or i5 or i6 or i7)
+case(sel)
+3'b000: out = i0;
+3'b001: out = i1;
+3'b010: out = i2;
+3'b011: out = i3;
+3'b100: out = i4;
+3'b101: out = i5;
+3'b110: out = i6;
+3'b111: out = i7;
+endcase
+endmodule
+
+module MUX_4X1(sel, i0, i1, i2, i3, out);
+input [2:0]i0, i1, i2, i3;
+input [1:0]sel;
+output [2:0]out;
+reg [2:0]out;
+always @(sel or i0 or i1 or i2 or i3)
+case(sel)
+2'b00: out = i0;
+2'b01: out = i1;
+2'b10: out = i2;
+2'b11: out = i3;
+endcase
+endmodule
